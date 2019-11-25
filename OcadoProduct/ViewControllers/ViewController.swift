@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  ProductListViewController.swift
 //  OcadoProduct
 //
 //  Created by Lucas Correa on 25/11/2019.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ProductListViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

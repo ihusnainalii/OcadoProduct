@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A0384245238BDAA300E9C92E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0384244238BDAA300E9C92E /* AppDelegate.swift */; };
-		A0384247238BDAA300E9C92E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0384246238BDAA300E9C92E /* SceneDelegate.swift */; };
-		A0384249238BDAA300E9C92E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0384248238BDAA300E9C92E /* ViewController.swift */; };
-		A038424C238BDAA300E9C92E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A038424A238BDAA300E9C92E /* Main.storyboard */; };
-		A038424E238BDAA900E9C92E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A038424D238BDAA900E9C92E /* Assets.xcassets */; };
-		A0384251238BDAA900E9C92E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A038424F238BDAA900E9C92E /* LaunchScreen.storyboard */; };
 		A038425C238BDAA900E9C92E /* OcadoProductTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A038425B238BDAA900E9C92E /* OcadoProductTests.swift */; };
+		A038427F238BDE1D00E9C92E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A038426A238BDE1C00E9C92E /* Assets.xcassets */; };
+		A0384280238BDE1D00E9C92E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A038426E238BDE1C00E9C92E /* AppDelegate.swift */; };
+		A0384281238BDE1D00E9C92E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A038426F238BDE1C00E9C92E /* SceneDelegate.swift */; };
+		A0384282238BDE1D00E9C92E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0384273238BDE1D00E9C92E /* ViewController.swift */; };
+		A0384285238BDEF400E9C92E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0384279238BDE1D00E9C92E /* Main.storyboard */; };
+		A0384286238BDEF800E9C92E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0384277238BDE1D00E9C92E /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,16 +28,16 @@
 
 /* Begin PBXFileReference section */
 		A0384241238BDAA300E9C92E /* OcadoProduct.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OcadoProduct.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		A0384244238BDAA300E9C92E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A0384246238BDAA300E9C92E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A0384248238BDAA300E9C92E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		A038424B238BDAA300E9C92E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		A038424D238BDAA900E9C92E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		A0384250238BDAA900E9C92E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A0384252238BDAA900E9C92E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A0384257238BDAA900E9C92E /* OcadoProductTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OcadoProductTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A038425B238BDAA900E9C92E /* OcadoProductTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OcadoProductTests.swift; sourceTree = "<group>"; };
 		A038425D238BDAA900E9C92E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A038426A238BDE1C00E9C92E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A038426E238BDE1C00E9C92E /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A038426F238BDE1C00E9C92E /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		A0384273238BDE1D00E9C92E /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A0384278238BDE1D00E9C92E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A038427A238BDE1D00E9C92E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,12 +79,16 @@
 		A0384243238BDAA300E9C92E /* OcadoProduct */ = {
 			isa = PBXGroup;
 			children = (
-				A0384244238BDAA300E9C92E /* AppDelegate.swift */,
-				A0384246238BDAA300E9C92E /* SceneDelegate.swift */,
-				A0384248238BDAA300E9C92E /* ViewController.swift */,
-				A038424A238BDAA300E9C92E /* Main.storyboard */,
-				A038424D238BDAA900E9C92E /* Assets.xcassets */,
-				A038424F238BDAA900E9C92E /* LaunchScreen.storyboard */,
+				A038426D238BDE1C00E9C92E /* AppDelegate */,
+				A0384276238BDE1D00E9C92E /* Storyboards */,
+				A0384271238BDE1D00E9C92E /* Extensions */,
+				A0384274238BDE1D00E9C92E /* Helpers */,
+				A038427B238BDE1D00E9C92E /* Networking */,
+				A0384267238BDE1C00E9C92E /* Models */,
+				A0384270238BDE1D00E9C92E /* Views */,
+				A0384272238BDE1D00E9C92E /* ViewControllers */,
+				A0384266238BDE1C00E9C92E /* ViewModels */,
+				A0384268238BDE1C00E9C92E /* Resources */,
 				A0384252238BDAA900E9C92E /* Info.plist */,
 			);
 			path = OcadoProduct;
@@ -97,6 +101,122 @@
 				A038425D238BDAA900E9C92E /* Info.plist */,
 			);
 			path = OcadoProductTests;
+			sourceTree = "<group>";
+		};
+		A0384266238BDE1C00E9C92E /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		A0384267238BDE1C00E9C92E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A0384268238BDE1C00E9C92E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A038426A238BDE1C00E9C92E /* Assets.xcassets */,
+				A038426B238BDE1C00E9C92E /* i18n */,
+				A038426C238BDE1C00E9C92E /* Fonts */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		A038426B238BDE1C00E9C92E /* i18n */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = i18n;
+			sourceTree = "<group>";
+		};
+		A038426C238BDE1C00E9C92E /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		A038426D238BDE1C00E9C92E /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				A038426E238BDE1C00E9C92E /* AppDelegate.swift */,
+				A038426F238BDE1C00E9C92E /* SceneDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		A0384270238BDE1D00E9C92E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A0384271238BDE1D00E9C92E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		A0384272238BDE1D00E9C92E /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				A0384273238BDE1D00E9C92E /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		A0384274238BDE1D00E9C92E /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		A0384276238BDE1D00E9C92E /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				A0384277238BDE1D00E9C92E /* LaunchScreen.storyboard */,
+				A0384279238BDE1D00E9C92E /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		A038427B238BDE1D00E9C92E /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				A038427C238BDE1D00E9C92E /* Routers */,
+				A038427D238BDE1D00E9C92E /* Clients */,
+				A038427E238BDE1D00E9C92E /* Services */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		A038427C238BDE1D00E9C92E /* Routers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Routers;
+			sourceTree = "<group>";
+		};
+		A038427D238BDE1D00E9C92E /* Clients */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Clients;
+			sourceTree = "<group>";
+		};
+		A038427E238BDE1D00E9C92E /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -180,9 +300,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A0384251238BDAA900E9C92E /* LaunchScreen.storyboard in Resources */,
-				A038424E238BDAA900E9C92E /* Assets.xcassets in Resources */,
-				A038424C238BDAA300E9C92E /* Main.storyboard in Resources */,
+				A0384286238BDEF800E9C92E /* LaunchScreen.storyboard in Resources */,
+				A038427F238BDE1D00E9C92E /* Assets.xcassets in Resources */,
+				A0384285238BDEF400E9C92E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,9 +320,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A0384249238BDAA300E9C92E /* ViewController.swift in Sources */,
-				A0384245238BDAA300E9C92E /* AppDelegate.swift in Sources */,
-				A0384247238BDAA300E9C92E /* SceneDelegate.swift in Sources */,
+				A0384282238BDE1D00E9C92E /* ViewController.swift in Sources */,
+				A0384280238BDE1D00E9C92E /* AppDelegate.swift in Sources */,
+				A0384281238BDE1D00E9C92E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,20 +345,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		A038424A238BDAA300E9C92E /* Main.storyboard */ = {
+		A0384277238BDE1D00E9C92E /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				A038424B238BDAA300E9C92E /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		A038424F238BDAA900E9C92E /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A0384250238BDAA900E9C92E /* Base */,
+				A0384278238BDE1D00E9C92E /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		A0384279238BDE1D00E9C92E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A038427A238BDE1D00E9C92E /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
