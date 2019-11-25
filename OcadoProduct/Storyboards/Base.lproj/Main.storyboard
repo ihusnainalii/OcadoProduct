@@ -1,24 +1,143 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Btf-Ed-Cah">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Product List View Controller-->
+        <!--Products-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ProductListViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProductListViewController" id="BYZ-38-t0r" customClass="ProductListViewController" customModule="OcadoProduct" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="4uE-Ec-VlD">
+                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                                <color key="color" name="Ocado - Cerulean"/>
+                            </activityIndicatorView>
+                            <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="XG3-bm-DRp">
+                                <rect key="frame" x="0.0" y="20" width="414" height="842"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="ProductCell" rowHeight="140" id="etH-01-utS" customClass="ProductCell" customModule="OcadoProduct" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="140"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="etH-01-utS" id="Cce-uQ-hxz">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="140"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Organic Fairtrade Bananas" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="zc6-P5-SOH">
+                                                    <rect key="frame" x="116" y="8" width="290" height="55"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="23"/>
+                                                    <color key="textColor" name="Ocado - Mako"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="991.45" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="8R2-wM-PuR">
+                                                    <rect key="frame" x="311" y="100" width="95" height="34"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="34" id="5Eq-cF-mbg"/>
+                                                        <constraint firstAttribute="width" constant="95" id="Ngk-bB-O6h"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="28"/>
+                                                    <color key="textColor" name="Ocado - Cerulean"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="OcadoEmpty" translatesAutoresizingMaskIntoConstraints="NO" id="ww2-sF-DeM">
+                                                    <rect key="frame" x="8" y="8" width="100" height="124"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="100" id="4uK-tf-GSj"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ocado Organic Fairtrade Bananas" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="wz4-ms-ggV">
+                                                    <rect key="frame" x="116" y="62" width="187" height="34"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="34" id="FA0-aq-FDz"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Italic" family="Helvetica Neue" pointSize="11"/>
+                                                    <color key="textColor" name="Ocado - Mako"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="8R2-wM-PuR" firstAttribute="leading" secondItem="wz4-ms-ggV" secondAttribute="trailing" constant="8" id="18V-CN-v6d"/>
+                                                <constraint firstAttribute="bottom" secondItem="ww2-sF-DeM" secondAttribute="bottom" constant="8" id="HTe-q0-hK8"/>
+                                                <constraint firstItem="ww2-sF-DeM" firstAttribute="leading" secondItem="Cce-uQ-hxz" secondAttribute="leading" constant="8" id="eXq-T6-hZ4"/>
+                                                <constraint firstAttribute="trailing" secondItem="8R2-wM-PuR" secondAttribute="trailing" constant="8" id="fSR-Kt-yfx"/>
+                                                <constraint firstItem="zc6-P5-SOH" firstAttribute="top" secondItem="Cce-uQ-hxz" secondAttribute="top" constant="8" id="gda-cC-eMU"/>
+                                                <constraint firstAttribute="trailing" secondItem="zc6-P5-SOH" secondAttribute="trailing" constant="8" id="ihU-NL-r5K"/>
+                                                <constraint firstItem="ww2-sF-DeM" firstAttribute="top" secondItem="Cce-uQ-hxz" secondAttribute="top" constant="8" id="lYw-Tv-fAE"/>
+                                                <constraint firstItem="wz4-ms-ggV" firstAttribute="leading" secondItem="ww2-sF-DeM" secondAttribute="trailing" constant="8" id="p1O-0l-QrX"/>
+                                                <constraint firstItem="wz4-ms-ggV" firstAttribute="top" secondItem="zc6-P5-SOH" secondAttribute="bottom" constant="-1" id="s8Z-Be-C33"/>
+                                                <constraint firstAttribute="bottom" secondItem="8R2-wM-PuR" secondAttribute="bottom" constant="6" id="vYf-Ul-qk3"/>
+                                                <constraint firstItem="zc6-P5-SOH" firstAttribute="leading" secondItem="ww2-sF-DeM" secondAttribute="trailing" constant="8" id="vrn-DV-TAZ"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="priceLabel" destination="8R2-wM-PuR" id="kf0-1p-afH"/>
+                                            <outlet property="productImageView" destination="ww2-sF-DeM" id="3cB-S7-ZqE"/>
+                                            <outlet property="sizeLabel" destination="wz4-ms-ggV" id="IMf-zI-rls"/>
+                                            <outlet property="titleLabel" destination="zc6-P5-SOH" id="Iwx-b0-F7e"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="agS-2B-1MN"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="U2l-8C-mBB"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <constraints>
+                            <constraint firstItem="XG3-bm-DRp" firstAttribute="leading" secondItem="sx9-Nh-HI9" secondAttribute="leading" id="5yE-Bt-SXd"/>
+                            <constraint firstItem="4uE-Ec-VlD" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ACz-Ey-esU"/>
+                            <constraint firstItem="4uE-Ec-VlD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Lnm-bM-vCN"/>
+                            <constraint firstItem="sx9-Nh-HI9" firstAttribute="trailing" secondItem="XG3-bm-DRp" secondAttribute="trailing" id="TBY-9a-nso"/>
+                            <constraint firstItem="XG3-bm-DRp" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="20" symbolic="YES" id="YeZ-qI-D6q"/>
+                            <constraint firstItem="sx9-Nh-HI9" firstAttribute="bottom" secondItem="XG3-bm-DRp" secondAttribute="bottom" id="ZWT-MC-toB"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="sx9-Nh-HI9"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Products" id="Jhp-jX-bze"/>
+                    <connections>
+                        <outlet property="loadingIndicator" destination="4uE-Ec-VlD" id="4fK-S8-mg5"/>
+                        <outlet property="productTableView" destination="XG3-bm-DRp" id="2j9-Km-qSh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="117.85714285714285"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="k1t-6n-DHR">
+            <objects>
+                <navigationController extendedLayoutIncludesOpaqueBars="YES" automaticallyAdjustsScrollViewInsets="NO" id="Btf-Ed-Cah" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="1oc-7S-BjM">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="6Ao-LJ-hOI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iN0-f2-777" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="117.85714285714285"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="OcadoEmpty" width="100" height="100"/>
+        <namedColor name="Ocado - Cerulean">
+            <color red="0.0" green="0.60784313725490191" blue="0.85490196078431369" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Ocado - Mako">
+            <color red="0.32156862745098036" green="0.32941176470588235" blue="0.33725490196078434" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>

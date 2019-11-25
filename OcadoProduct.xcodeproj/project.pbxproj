@@ -35,6 +35,10 @@
 		A03842B6238C027700E9C92E /* productDetail.json in Resources */ = {isa = PBXBuildFile; fileRef = A03842B5238C027700E9C92E /* productDetail.json */; };
 		A03842BA238C24B900E9C92E /* ProductListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03842B9238C24B900E9C92E /* ProductListViewController.swift */; };
 		A03842BC238C254100E9C92E /* ProductListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03842BB238C254100E9C92E /* ProductListViewModel.swift */; };
+		A03842BE238C41EF00E9C92E /* ClusterHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03842BD238C41EF00E9C92E /* ClusterHeaderView.swift */; };
+		A03842C0238C459F00E9C92E /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03842BF238C459F00E9C92E /* ProductCell.swift */; };
+		A03842C2238C47D900E9C92E /* ImageDownload.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03842C1238C47D900E9C92E /* ImageDownload.swift */; };
+		A03842C4238C49DF00E9C92E /* ImageView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03842C3238C49DF00E9C92E /* ImageView+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +84,10 @@
 		A03842B5238C027700E9C92E /* productDetail.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = productDetail.json; sourceTree = "<group>"; };
 		A03842B9238C24B900E9C92E /* ProductListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductListViewController.swift; sourceTree = "<group>"; };
 		A03842BB238C254100E9C92E /* ProductListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewModel.swift; sourceTree = "<group>"; };
+		A03842BD238C41EF00E9C92E /* ClusterHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClusterHeaderView.swift; sourceTree = "<group>"; };
+		A03842BF238C459F00E9C92E /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
+		A03842C1238C47D900E9C92E /* ImageDownload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownload.swift; sourceTree = "<group>"; };
+		A03842C3238C49DF00E9C92E /* ImageView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ImageView+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,6 +209,8 @@
 		A0384270238BDE1D00E9C92E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A03842BD238C41EF00E9C92E /* ClusterHeaderView.swift */,
+				A03842BF238C459F00E9C92E /* ProductCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -208,6 +218,7 @@
 		A0384271238BDE1D00E9C92E /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				A03842C3238C49DF00E9C92E /* ImageView+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -224,6 +235,7 @@
 			isa = PBXGroup;
 			children = (
 				A03842A2238BFCA400E9C92E /* Constants.swift */,
+				A03842C1238C47D900E9C92E /* ImageDownload.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -440,14 +452,18 @@
 				A0384288238BE4D300E9C92E /* ProductList.swift in Sources */,
 				A03842A1238BFC8200E9C92E /* ProductRouter.swift in Sources */,
 				A038428A238BE50100E9C92E /* Product.swift in Sources */,
+				A03842BE238C41EF00E9C92E /* ClusterHeaderView.swift in Sources */,
 				A038428E238BE68000E9C92E /* ProductDetail.swift in Sources */,
 				A03842BA238C24B900E9C92E /* ProductListViewController.swift in Sources */,
 				A03842A3238BFCA400E9C92E /* Constants.swift in Sources */,
 				A038429B238BFBF300E9C92E /* Service.swift in Sources */,
 				A0384280238BDE1D00E9C92E /* AppDelegate.swift in Sources */,
 				A03842A5238BFD3C00E9C92E /* ProductClient.swift in Sources */,
+				A03842C2238C47D900E9C92E /* ImageDownload.swift in Sources */,
 				A038428C238BE51E00E9C92E /* Item.swift in Sources */,
 				A038429F238BFC3600E9C92E /* NetworkError.swift in Sources */,
+				A03842C4238C49DF00E9C92E /* ImageView+Ext.swift in Sources */,
+				A03842C0238C459F00E9C92E /* ProductCell.swift in Sources */,
 				A03842BC238C254100E9C92E /* ProductListViewModel.swift in Sources */,
 				A0384281238BDE1D00E9C92E /* SceneDelegate.swift in Sources */,
 			);
@@ -618,6 +634,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6CG326ELR9;
 				INFOPLIST_FILE = OcadoProduct/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -636,6 +653,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6CG326ELR9;
 				INFOPLIST_FILE = OcadoProduct/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -656,7 +674,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6CG326ELR9;
 				INFOPLIST_FILE = OcadoProductTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -680,7 +698,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6CG326ELR9;
 				INFOPLIST_FILE = OcadoProductTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
