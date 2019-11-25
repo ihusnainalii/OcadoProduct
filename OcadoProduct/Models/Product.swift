@@ -17,6 +17,11 @@ struct Product: Codable {
     
     //
     // MARK: - Initializers
+    
+    /// The initializer of product that contains tag and items
+    /// - Parameters:
+    ///   - tag: Header title
+    ///   - items: [Item]
     init(tag: String = "", items: [Item] = []) {
         self.tag = tag
         self.items = items

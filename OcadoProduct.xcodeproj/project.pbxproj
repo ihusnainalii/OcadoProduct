@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A038425C238BDAA900E9C92E /* OcadoProductTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A038425B238BDAA900E9C92E /* OcadoProductTests.swift */; };
 		A038427F238BDE1D00E9C92E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A038426A238BDE1C00E9C92E /* Assets.xcassets */; };
 		A0384280238BDE1D00E9C92E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A038426E238BDE1C00E9C92E /* AppDelegate.swift */; };
 		A0384281238BDE1D00E9C92E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A038426F238BDE1C00E9C92E /* SceneDelegate.swift */; };
@@ -18,6 +17,10 @@
 		A038428A238BE50100E9C92E /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0384289238BE50000E9C92E /* Product.swift */; };
 		A038428C238BE51E00E9C92E /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = A038428B238BE51E00E9C92E /* Item.swift */; };
 		A038428E238BE68000E9C92E /* ProductDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = A038428D238BE68000E9C92E /* ProductDetail.swift */; };
+		A0384291238BE76300E9C92E /* ProductListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0384290238BE76300E9C92E /* ProductListTests.swift */; };
+		A0384293238BE97E00E9C92E /* ProductTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0384292238BE97E00E9C92E /* ProductTests.swift */; };
+		A0384295238BEDB300E9C92E /* ItemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0384294238BEDB300E9C92E /* ItemTests.swift */; };
+		A0384297238BF45300E9C92E /* ProductDetailTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0384296238BF45300E9C92E /* ProductDetailTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,7 +37,6 @@
 		A0384241238BDAA300E9C92E /* OcadoProduct.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OcadoProduct.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0384252238BDAA900E9C92E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A0384257238BDAA900E9C92E /* OcadoProductTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OcadoProductTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A038425B238BDAA900E9C92E /* OcadoProductTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OcadoProductTests.swift; sourceTree = "<group>"; };
 		A038425D238BDAA900E9C92E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A038426A238BDE1C00E9C92E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A038426E238BDE1C00E9C92E /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -46,6 +48,10 @@
 		A0384289238BE50000E9C92E /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		A038428B238BE51E00E9C92E /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		A038428D238BE68000E9C92E /* ProductDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetail.swift; sourceTree = "<group>"; };
+		A0384290238BE76300E9C92E /* ProductListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListTests.swift; sourceTree = "<group>"; };
+		A0384292238BE97E00E9C92E /* ProductTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTests.swift; sourceTree = "<group>"; };
+		A0384294238BEDB300E9C92E /* ItemTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTests.swift; sourceTree = "<group>"; };
+		A0384296238BF45300E9C92E /* ProductDetailTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,7 +111,7 @@
 		A038425A238BDAA900E9C92E /* OcadoProductTests */ = {
 			isa = PBXGroup;
 			children = (
-				A038425B238BDAA900E9C92E /* OcadoProductTests.swift */,
+				A038428F238BE73500E9C92E /* Models */,
 				A038425D238BDAA900E9C92E /* Info.plist */,
 			);
 			path = OcadoProductTests;
@@ -231,6 +237,17 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		A038428F238BE73500E9C92E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A0384290238BE76300E9C92E /* ProductListTests.swift */,
+				A0384292238BE97E00E9C92E /* ProductTests.swift */,
+				A0384294238BEDB300E9C92E /* ItemTests.swift */,
+				A0384296238BF45300E9C92E /* ProductDetailTests.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -284,6 +301,7 @@
 					};
 					A0384256238BDAA900E9C92E = {
 						CreatedOnToolsVersion = 11.2.1;
+						LastSwiftMigration = 1120;
 						TestTargetID = A0384240238BDAA300E9C92E;
 					};
 				};
@@ -346,7 +364,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A038425C238BDAA900E9C92E /* OcadoProductTests.swift in Sources */,
+				A0384291238BE76300E9C92E /* ProductListTests.swift in Sources */,
+				A0384293238BE97E00E9C92E /* ProductTests.swift in Sources */,
+				A0384297238BF45300E9C92E /* ProductDetailTests.swift in Sources */,
+				A0384295238BEDB300E9C92E /* ItemTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -535,6 +556,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6CG326ELR9;
 				INFOPLIST_FILE = OcadoProductTests/Info.plist;
@@ -546,6 +568,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.siriuscode.OcadoProductTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OcadoProduct.app/OcadoProduct";
@@ -557,6 +580,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6CG326ELR9;
 				INFOPLIST_FILE = OcadoProductTests/Info.plist;
