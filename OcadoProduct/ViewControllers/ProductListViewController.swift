@@ -10,11 +10,23 @@ import UIKit
 
 class ProductListViewController: UIViewController {
 
+    //
+    // MARK: - Properties
+    lazy var productListViewModel: ProductListViewModel = {
+        let productListViewModel = ProductListViewModel()
+        return productListViewModel
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        productListViewModel.list(success: {
+            
+        }) { error in
+            
+        }
     }
-
 
 }
 
