@@ -13,4 +13,10 @@ struct ProductList: Codable {
     //
     // MARK: - Properties
     let products: [Product]
+    
+    //
+    // MARK: - Codable
+    enum CodingKeys: String, CodingKey {
+        case products = "clusters"
+    }
 }

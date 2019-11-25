@@ -21,6 +21,19 @@
 		A0384293238BE97E00E9C92E /* ProductTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0384292238BE97E00E9C92E /* ProductTests.swift */; };
 		A0384295238BEDB300E9C92E /* ItemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0384294238BEDB300E9C92E /* ItemTests.swift */; };
 		A0384297238BF45300E9C92E /* ProductDetailTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0384296238BF45300E9C92E /* ProductDetailTests.swift */; };
+		A0384299238BFBD200E9C92E /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0384298238BFBD200E9C92E /* Router.swift */; };
+		A038429B238BFBF300E9C92E /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = A038429A238BFBF300E9C92E /* Service.swift */; };
+		A038429D238BFC1300E9C92E /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A038429C238BFC1300E9C92E /* NetworkClient.swift */; };
+		A038429F238BFC3600E9C92E /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A038429E238BFC3600E9C92E /* NetworkError.swift */; };
+		A03842A1238BFC8200E9C92E /* ProductRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03842A0238BFC8200E9C92E /* ProductRouter.swift */; };
+		A03842A3238BFCA400E9C92E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03842A2238BFCA400E9C92E /* Constants.swift */; };
+		A03842A5238BFD3C00E9C92E /* ProductClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03842A4238BFD3C00E9C92E /* ProductClient.swift */; };
+		A03842A7238BFDE600E9C92E /* ProductService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03842A6238BFDE600E9C92E /* ProductService.swift */; };
+		A03842AD238BFF1200E9C92E /* ProductRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03842AC238BFF1200E9C92E /* ProductRouterTests.swift */; };
+		A03842AF238BFFA600E9C92E /* ProductServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03842AE238BFFA600E9C92E /* ProductServiceTests.swift */; };
+		A03842B1238C006F00E9C92E /* MockProductClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03842B0238C006F00E9C92E /* MockProductClient.swift */; };
+		A03842B3238C018D00E9C92E /* products.json in Resources */ = {isa = PBXBuildFile; fileRef = A03842B2238C018D00E9C92E /* products.json */; };
+		A03842B6238C027700E9C92E /* productDetail.json in Resources */ = {isa = PBXBuildFile; fileRef = A03842B5238C027700E9C92E /* productDetail.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +65,19 @@
 		A0384292238BE97E00E9C92E /* ProductTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTests.swift; sourceTree = "<group>"; };
 		A0384294238BEDB300E9C92E /* ItemTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTests.swift; sourceTree = "<group>"; };
 		A0384296238BF45300E9C92E /* ProductDetailTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailTests.swift; sourceTree = "<group>"; };
+		A0384298238BFBD200E9C92E /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		A038429A238BFBF300E9C92E /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		A038429C238BFC1300E9C92E /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
+		A038429E238BFC3600E9C92E /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		A03842A0238BFC8200E9C92E /* ProductRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductRouter.swift; sourceTree = "<group>"; };
+		A03842A2238BFCA400E9C92E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		A03842A4238BFD3C00E9C92E /* ProductClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductClient.swift; sourceTree = "<group>"; };
+		A03842A6238BFDE600E9C92E /* ProductService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductService.swift; sourceTree = "<group>"; };
+		A03842AC238BFF1200E9C92E /* ProductRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductRouterTests.swift; sourceTree = "<group>"; };
+		A03842AE238BFFA600E9C92E /* ProductServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductServiceTests.swift; sourceTree = "<group>"; };
+		A03842B0238C006F00E9C92E /* MockProductClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockProductClient.swift; sourceTree = "<group>"; };
+		A03842B2238C018D00E9C92E /* products.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = products.json; sourceTree = "<group>"; };
+		A03842B5238C027700E9C92E /* productDetail.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = productDetail.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +137,7 @@
 		A038425A238BDAA900E9C92E /* OcadoProductTests */ = {
 			isa = PBXGroup;
 			children = (
+				A03842A8238BFEBF00E9C92E /* Networking */,
 				A038428F238BE73500E9C92E /* Models */,
 				A038425D238BDAA900E9C92E /* Info.plist */,
 			);
@@ -193,6 +220,7 @@
 		A0384274238BDE1D00E9C92E /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				A03842A2238BFCA400E9C92E /* Constants.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -210,8 +238,8 @@
 			isa = PBXGroup;
 			children = (
 				A038427C238BDE1D00E9C92E /* Routers */,
-				A038427D238BDE1D00E9C92E /* Clients */,
 				A038427E238BDE1D00E9C92E /* Services */,
+				A038427D238BDE1D00E9C92E /* Clients */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -219,6 +247,8 @@
 		A038427C238BDE1D00E9C92E /* Routers */ = {
 			isa = PBXGroup;
 			children = (
+				A0384298238BFBD200E9C92E /* Router.swift */,
+				A03842A0238BFC8200E9C92E /* ProductRouter.swift */,
 			);
 			path = Routers;
 			sourceTree = "<group>";
@@ -226,6 +256,9 @@
 		A038427D238BDE1D00E9C92E /* Clients */ = {
 			isa = PBXGroup;
 			children = (
+				A038429E238BFC3600E9C92E /* NetworkError.swift */,
+				A038429C238BFC1300E9C92E /* NetworkClient.swift */,
+				A03842A4238BFD3C00E9C92E /* ProductClient.swift */,
 			);
 			path = Clients;
 			sourceTree = "<group>";
@@ -233,6 +266,8 @@
 		A038427E238BDE1D00E9C92E /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				A038429A238BFBF300E9C92E /* Service.swift */,
+				A03842A6238BFDE600E9C92E /* ProductService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -246,6 +281,50 @@
 				A0384296238BF45300E9C92E /* ProductDetailTests.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		A03842A8238BFEBF00E9C92E /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				A03842B4238C025800E9C92E /* JSONs */,
+				A03842A9238BFEC700E9C92E /* Routers */,
+				A03842AA238BFECF00E9C92E /* Services */,
+				A03842AB238BFEE300E9C92E /* Clients */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		A03842A9238BFEC700E9C92E /* Routers */ = {
+			isa = PBXGroup;
+			children = (
+				A03842AC238BFF1200E9C92E /* ProductRouterTests.swift */,
+			);
+			path = Routers;
+			sourceTree = "<group>";
+		};
+		A03842AA238BFECF00E9C92E /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				A03842AE238BFFA600E9C92E /* ProductServiceTests.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		A03842AB238BFEE300E9C92E /* Clients */ = {
+			isa = PBXGroup;
+			children = (
+				A03842B0238C006F00E9C92E /* MockProductClient.swift */,
+			);
+			path = Clients;
+			sourceTree = "<group>";
+		};
+		A03842B4238C025800E9C92E /* JSONs */ = {
+			isa = PBXGroup;
+			children = (
+				A03842B2238C018D00E9C92E /* products.json */,
+				A03842B5238C027700E9C92E /* productDetail.json */,
+			);
+			path = JSONs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -340,6 +419,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A03842B6238C027700E9C92E /* productDetail.json in Resources */,
+				A03842B3238C018D00E9C92E /* products.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,12 +431,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A03842A7238BFDE600E9C92E /* ProductService.swift in Sources */,
+				A0384299238BFBD200E9C92E /* Router.swift in Sources */,
+				A038429D238BFC1300E9C92E /* NetworkClient.swift in Sources */,
 				A0384282238BDE1D00E9C92E /* ViewController.swift in Sources */,
 				A0384288238BE4D300E9C92E /* ProductList.swift in Sources */,
+				A03842A1238BFC8200E9C92E /* ProductRouter.swift in Sources */,
 				A038428A238BE50100E9C92E /* Product.swift in Sources */,
 				A038428E238BE68000E9C92E /* ProductDetail.swift in Sources */,
+				A03842A3238BFCA400E9C92E /* Constants.swift in Sources */,
+				A038429B238BFBF300E9C92E /* Service.swift in Sources */,
 				A0384280238BDE1D00E9C92E /* AppDelegate.swift in Sources */,
+				A03842A5238BFD3C00E9C92E /* ProductClient.swift in Sources */,
 				A038428C238BE51E00E9C92E /* Item.swift in Sources */,
+				A038429F238BFC3600E9C92E /* NetworkError.swift in Sources */,
 				A0384281238BDE1D00E9C92E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -367,6 +456,9 @@
 				A0384291238BE76300E9C92E /* ProductListTests.swift in Sources */,
 				A0384293238BE97E00E9C92E /* ProductTests.swift in Sources */,
 				A0384297238BF45300E9C92E /* ProductDetailTests.swift in Sources */,
+				A03842B1238C006F00E9C92E /* MockProductClient.swift in Sources */,
+				A03842AF238BFFA600E9C92E /* ProductServiceTests.swift in Sources */,
+				A03842AD238BFF1200E9C92E /* ProductRouterTests.swift in Sources */,
 				A0384295238BEDB300E9C92E /* ItemTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

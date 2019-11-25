@@ -20,7 +20,6 @@ struct ProductDetail: Codable {
     //
     // MARK: - Initializers
     
-    
     /// The initializer of Product detail that contains id, title, imageURL, description and allergy information.
     /// - Parameters:
     ///   - id: id of the product detail (Int)
