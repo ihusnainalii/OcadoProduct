@@ -14,6 +14,10 @@
 		A0384282238BDE1D00E9C92E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0384273238BDE1D00E9C92E /* ViewController.swift */; };
 		A0384285238BDEF400E9C92E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0384279238BDE1D00E9C92E /* Main.storyboard */; };
 		A0384286238BDEF800E9C92E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0384277238BDE1D00E9C92E /* LaunchScreen.storyboard */; };
+		A0384288238BE4D300E9C92E /* ProductList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0384287238BE4D300E9C92E /* ProductList.swift */; };
+		A038428A238BE50100E9C92E /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0384289238BE50000E9C92E /* Product.swift */; };
+		A038428C238BE51E00E9C92E /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = A038428B238BE51E00E9C92E /* Item.swift */; };
+		A038428E238BE68000E9C92E /* ProductDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = A038428D238BE68000E9C92E /* ProductDetail.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +42,10 @@
 		A0384273238BDE1D00E9C92E /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A0384278238BDE1D00E9C92E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A038427A238BDE1D00E9C92E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A0384287238BE4D300E9C92E /* ProductList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductList.swift; sourceTree = "<group>"; };
+		A0384289238BE50000E9C92E /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		A038428B238BE51E00E9C92E /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		A038428D238BE68000E9C92E /* ProductDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +121,10 @@
 		A0384267238BDE1C00E9C92E /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				A0384287238BE4D300E9C92E /* ProductList.swift */,
+				A0384289238BE50000E9C92E /* Product.swift */,
+				A038428B238BE51E00E9C92E /* Item.swift */,
+				A038428D238BE68000E9C92E /* ProductDetail.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -321,7 +333,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				A0384282238BDE1D00E9C92E /* ViewController.swift in Sources */,
+				A0384288238BE4D300E9C92E /* ProductList.swift in Sources */,
+				A038428A238BE50100E9C92E /* Product.swift in Sources */,
+				A038428E238BE68000E9C92E /* ProductDetail.swift in Sources */,
 				A0384280238BDE1D00E9C92E /* AppDelegate.swift in Sources */,
+				A038428C238BE51E00E9C92E /* Item.swift in Sources */,
 				A0384281238BDE1D00E9C92E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
