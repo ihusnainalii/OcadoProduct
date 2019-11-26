@@ -45,7 +45,7 @@ struct ProductClient: NetworkClient {
                         }
                         completion(.success(object))
                     } else {
-                        completion(.failure(.statusCodeError(message: "StatusCode invalid", code: response.statusCode)))
+                        completion(.failure(.statusCodeError(message: "Unexpected statusCode", code: response.statusCode)))
                     }
                 }
                 

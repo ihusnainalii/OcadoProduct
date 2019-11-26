@@ -8,7 +8,7 @@
 
 import Foundation
 
-typealias ResultProducts = Result<(ProductList), NetworkError>
+typealias ResultClusterList = Result<(ClusterList), NetworkError>
 typealias ResultProductDetail = Result<ProductDetail, NetworkError>
 
 class ProductService: Service {
@@ -26,17 +26,17 @@ class ProductService: Service {
     //
     // MARK: - Public Functions
     
-    /// Product list - get all products
-    /// - Parameter completion: Result<(ProductList), NetworkError>
-    func productList(completion: @escaping (ResultProducts) -> Void) {
-        client.request(router: ProductRouter.products, returnType: ProductList.self) { result in
+    /// Cluster list - get all clusters
+    /// - Parameter completion: Result<(ClusterList), NetworkError>
+    func clusterList(completion: @escaping (ResultClusterList) -> Void) {
+        client.request(router: ProductRouter.products, returnType: ClusterList.self) { result in
             completion(result)
         }
     }
     
     /// Get the detail of a product
     /// - Parameters:
-    ///   - idBook: Int
+    ///   - idProduct: Int
     ///   - completion: Result<ProductDetail, NetworkError>
     func productDetail(idProduct: Int, completion: @escaping (ResultProductDetail) -> Void) {
         client.request(router: ProductRouter.productDetail(idProduct: idProduct), returnType: ProductDetail.self) { result in

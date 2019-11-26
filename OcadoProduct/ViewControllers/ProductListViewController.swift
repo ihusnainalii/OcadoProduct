@@ -23,21 +23,37 @@ class ProductListViewController: UIViewController {
     @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     @IBOutlet weak var productTableView: UITableView!
     
+    //
+    // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        productTableView.register(
-            ClusterHeaderView.self,
-            forHeaderFooterViewReuseIdentifier:
-                ClusterHeaderView.reuseIdentifier
-        )
+        //Register Header Footer
+        productTableView.register(ClusterHeaderView.self, forHeaderFooterViewReuseIdentifier: ClusterHeaderView.reuseIdentifier)
         
-        
-        productListViewModel.list(success: {
+        loadClusters()
+    }
+    
+    //
+    // MARK: - Private Functions
+    
+    /// Load cluster list
+    fileprivate func loadClusters() {
+        productListViewModel.clusterList(success: {
             self.productTableView.isHidden = false
             self.productTableView.reloadData()
         }) { error in
-            
+            //We could put a message more user friendly.
+            switch error {
+            case .statusCodeError(let message, _):
+                self.loadingIndicator.isHidden = true
+                let alertController = UIAlertController(title: "Alert", message: message, preferredStyle: .alert)
+                alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                self.present(alertController, animated: true, completion: nil)
+            case .domainError, .decodingError, .unknownError:
+                // Do something here if it is the business rule.
+                break
+            }
         }
     }
 }
@@ -46,11 +62,11 @@ class ProductListViewController: UIViewController {
 extension ProductListViewController: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return productListViewModel.productItems.count
+        return productListViewModel.clusterItems.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return productListViewModel.productItems[section].items.count
+        return productListViewModel.clusterItems[section].products.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -71,28 +87,22 @@ extension ProductListViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-//        let book = bookListViewModel.bookItems[indexPath.row]
-//        performSegue(withIdentifier: bookDetailSegue, sender: book)
     }
     
-    func tableView(_ tableView: UITableView,
-                   heightForHeaderInSection section: Int) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return UITableView.automaticDimension
     }
 
-    func tableView(_ tableView: UITableView,
-                   estimatedHeightForHeaderInSection section: Int) -> CGFloat {
+    func tableView(_ tableView: UITableView, estimatedHeightForHeaderInSection section: Int) -> CGFloat {
         return 50.0
     }
 
-    func tableView(_ tableView: UITableView,
-                   viewForHeaderInSection section: Int) -> UIView? {
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         guard let view = tableView.dequeueReusableHeaderFooterView(withIdentifier: ClusterHeaderView.reuseIdentifier) as? ClusterHeaderView else {
             return nil
         }
 
-        view.titleLabel.text = productListViewModel.productItems[section].tag
-
+        view.titleLabel.text = productListViewModel.clusterItems[section].tag
         return view
     }
 }

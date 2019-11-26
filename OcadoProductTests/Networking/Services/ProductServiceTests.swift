@@ -23,15 +23,15 @@ class ProductServiceTests: XCTestCase {
         productClient = nil
     }
     
-    func testProductServiceHasExpectedRequestProductsCount() {
+    func testProductServiceHasExpectedRequestClustersCount() {
         productService = ProductService(client: productClient)
         
-        productService.productList { result in
+        productService.clusterList { result in
             switch result {
-            case .success(let productList):
-                XCTAssert(productList.products.count == 5)
+            case .success(let clusterList):
+                XCTAssert(clusterList.clusters.count == 5)
             case .failure(_):
-                XCTFail("ProductService has expected request products count equal 5")
+                XCTFail("ProductService has expected request clusters count equal 5")
             }
         }
     }

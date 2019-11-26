@@ -26,7 +26,7 @@ class ProductCell: UITableViewCell {
     ///   - indexPath: An IndexPath
     func configure(withViewModel viewModel:ProductListViewModel, indexPath: IndexPath) {
         
-        let product = viewModel.productItems[indexPath.section].items[indexPath.row]
+        let product = viewModel.clusterItems[indexPath.section].products[indexPath.row]
         titleLabel.text = product.title
         sizeLabel.text = product.size
         priceLabel.text = product.price

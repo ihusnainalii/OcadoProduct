@@ -12,11 +12,11 @@ class ProductListViewModel {
     
     //
     // MARK: - Properties
-    var productItems: [Product] {
+    var clusterItems: [Cluster] {
         didSet {
-            self.productItems.sort { product1, product2  in
+            self.clusterItems.sort { cluster1, cluster2  in
                 //I am checking with lowercase so I can order correctly.
-                return product1.tag.lowercased() < product2.tag.lowercased()
+                return cluster1.tag.lowercased() < cluster2.tag.lowercased()
             }
         }
     }
@@ -27,21 +27,21 @@ class ProductListViewModel {
     // MARK: - Initializer DI
     init(service: ProductService = ProductService(client: ProductClient())) {
         self.service = service
-        self.productItems = [Product]()
+        self.clusterItems = [Cluster]()
     }
     
     //
     // MARK: - Public Functions
     
-    /// Product list
+    /// Cluster list
     /// - Parameters:
     ///   - success: Closure Void
     ///   - failure: Closure Errors
-    func list(success: @escaping SuccessHandler, failure: @escaping FailureHandler) {
-        self.service.productList { result in
+    func clusterList(success: @escaping SuccessHandler, failure: @escaping FailureHandler) {
+        self.service.clusterList { result in
             switch result {
-            case .success(let productList):
-                self.productItems = productList.products
+            case .success(let clusterList):
+                self.clusterItems = clusterList.clusters
                 success()
             case .failure(let error):
                 failure(error)

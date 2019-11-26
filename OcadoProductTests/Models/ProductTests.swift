@@ -12,13 +12,9 @@ import XCTest
 class ProductTests: XCTestCase {
     
     var product: Product!
-    var items: [Item]!
     
     override func setUp() {
-        let item = Item(id: 309396011, price: "1.45", title: "Ocado Organic Fairtrade Bananas", size: "6 per pack", imageURL: "https://mobile.ocado.com/webservices/catalogue/items/item/309396011/images/image/0/240x240.jpg")
-        
-        items = [Item]()
-        items.append(item)
+       
     }
     
     override func tearDown() {
@@ -27,25 +23,49 @@ class ProductTests: XCTestCase {
     
     func testProductHasExpectedToBeEmpty() {
         product = Product()
-        XCTAssertEqual(product.tag, "")
-        XCTAssertEqual(product.items.count, 0)
+        XCTAssertEqual(product.id, 0)
+        XCTAssertEqual(product.price, "")
+        XCTAssertEqual(product.title, "")
+        XCTAssertEqual(product.size, "")
+        XCTAssertEqual(product.imageURL, "")
     }
     
-    func testProductHasExpectedTheTag() {
-        product = Product(tag: "Fresh > Fruit > Bananas")
-        XCTAssertEqual(product.tag, "Fresh > Fruit > Bananas")
-        XCTAssertNotEqual(product.tag, "Fresh > Salads & Herbs > Cucumber")
-        XCTAssertTrue(product.items.count == 0)
+    func testProductHasExpectedTheId() {
+        product = Product(id: 309396011)
+        XCTAssertEqual(product.id, 309396011)
+        XCTAssertNotEqual(product.id, 227255011)
     }
     
-    func testProductHasExpectedTheItems() {
-        product = Product(tag: "Fresh > Fruit > Bananas", items: items)
-        let item = product.items.first
-        XCTAssertEqual(item?.price, "1.45")
-        XCTAssertEqual(item?.title, "Ocado Organic Fairtrade Bananas")
-        XCTAssertEqual(item?.size, "6 per pack")
-        XCTAssertEqual(item?.imageURL, "https://mobile.ocado.com/webservices/catalogue/items/item/309396011/images/image/0/240x240.jpg")
-        XCTAssertTrue(product.items.count == 1)
+    func testProductHasExpectedThePrice() {
+        product = Product(price: "1.45")
+        XCTAssertEqual(product.price, "1.45")
+        XCTAssertNotEqual(product.price, "4.45")
     }
     
+    func testProductHasExpectedTheTitle() {
+        product = Product(title: "Ocado Organic Fairtrade Bananas")
+        XCTAssertEqual(product.title, "Ocado Organic Fairtrade Bananas")
+        XCTAssertNotEqual(product.title, "Ocado Fairtrade Ripen at Home Bananas")
+    }
+    
+    func testProductHasExpectedTheSize() {
+        product = Product(size: "6 per pack")
+        XCTAssertEqual(product.size, "6 per pack")
+        XCTAssertNotEqual(product.size, "5 per pack")
+    }
+    
+    func testProductHasExpectedTheImageURL() {
+        product = Product(imageURL: "https://mobile.ocado.com/webservices/catalogue/items/item/309396011/images/image/0/240x240.jpg")
+        XCTAssertEqual(product.imageURL, "https://mobile.ocado.com/webservices/catalogue/items/item/309396011/images/image/0/240x240.jpg")
+        XCTAssertNotEqual(product.imageURL, "https://mobile.ocado.com/webservices/catalogue/items/item/227255011/images/image/0/240x240.jpg")
+    }
+    
+    func testProductHasExpectedTheIdTitlePriceImage() {
+        product = Product(id: 309396011, price: "1.45", title: "Ocado Organic Fairtrade Bananas", imageURL: "https://mobile.ocado.com/webservices/catalogue/items/item/309396011/images/image/0/240x240.jpg")
+        XCTAssertEqual(product.id, 309396011)
+        XCTAssertEqual(product.price, "1.45")
+        XCTAssertEqual(product.title, "Ocado Organic Fairtrade Bananas")
+        XCTAssertEqual(product.imageURL, "https://mobile.ocado.com/webservices/catalogue/items/item/309396011/images/image/0/240x240.jpg")
+        XCTAssertEqual(product.size, "")
+    }
 }
