@@ -56,6 +56,20 @@ class ProductListViewController: UIViewController {
             }
         }
     }
+    
+    //
+    // MARK: - Public Functions
+    
+    //
+    // MARK: - UIStoryboardSegueDelegate
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == productDetailSegue {
+            let destination: ProductDetailViewController = (segue.destination as? ProductDetailViewController)!
+            if let product = sender as? Product {
+                destination.productDetailViewModel.product = product
+            }
+        }
+    }
 }
 
 // MARK: - UITableViewDataSource
@@ -87,6 +101,8 @@ extension ProductListViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        let product = productListViewModel.clusterItems[indexPath.section].products[indexPath.row]
+        performSegue(withIdentifier: productDetailSegue, sender: product)
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {

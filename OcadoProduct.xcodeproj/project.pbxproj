@@ -39,6 +39,8 @@
 		A03842C0238C459F00E9C92E /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03842BF238C459F00E9C92E /* ProductCell.swift */; };
 		A03842C2238C47D900E9C92E /* ImageDownload.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03842C1238C47D900E9C92E /* ImageDownload.swift */; };
 		A03842C4238C49DF00E9C92E /* ImageView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03842C3238C49DF00E9C92E /* ImageView+Ext.swift */; };
+		A07FAE15238DA36100EBDFBC /* ProductDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07FAE14238DA36100EBDFBC /* ProductDetailViewModel.swift */; };
+		A0C773DC238D84D60060423B /* ProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C773DB238D84D60060423B /* ProductDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +90,8 @@
 		A03842BF238C459F00E9C92E /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
 		A03842C1238C47D900E9C92E /* ImageDownload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownload.swift; sourceTree = "<group>"; };
 		A03842C3238C49DF00E9C92E /* ImageView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ImageView+Ext.swift"; sourceTree = "<group>"; };
+		A07FAE14238DA36100EBDFBC /* ProductDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewModel.swift; sourceTree = "<group>"; };
+		A0C773DB238D84D60060423B /* ProductDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +153,8 @@
 			children = (
 				A03842A8238BFEBF00E9C92E /* Networking */,
 				A038428F238BE73500E9C92E /* Models */,
+				A07FAE17238DAAF600EBDFBC /* ViewControllers */,
+				A07FAE16238DAAF000EBDFBC /* ViewModels */,
 				A038425D238BDAA900E9C92E /* Info.plist */,
 			);
 			path = OcadoProductTests;
@@ -158,6 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				A03842BB238C254100E9C92E /* ProductListViewModel.swift */,
+				A07FAE14238DA36100EBDFBC /* ProductDetailViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -227,6 +234,7 @@
 			isa = PBXGroup;
 			children = (
 				A03842B9238C24B900E9C92E /* ProductListViewController.swift */,
+				A0C773DB238D84D60060423B /* ProductDetailViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -342,6 +350,20 @@
 			path = JSONs;
 			sourceTree = "<group>";
 		};
+		A07FAE16238DAAF000EBDFBC /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		A07FAE17238DAAF600EBDFBC /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -448,8 +470,10 @@
 			files = (
 				A03842A7238BFDE600E9C92E /* ProductService.swift in Sources */,
 				A0384299238BFBD200E9C92E /* Router.swift in Sources */,
+				A0C773DC238D84D60060423B /* ProductDetailViewController.swift in Sources */,
 				A038429D238BFC1300E9C92E /* NetworkClient.swift in Sources */,
 				A0384288238BE4D300E9C92E /* ClusterList.swift in Sources */,
+				A07FAE15238DA36100EBDFBC /* ProductDetailViewModel.swift in Sources */,
 				A03842A1238BFC8200E9C92E /* ProductRouter.swift in Sources */,
 				A038428A238BE50100E9C92E /* Cluster.swift in Sources */,
 				A03842BE238C41EF00E9C92E /* ClusterHeaderView.swift in Sources */,

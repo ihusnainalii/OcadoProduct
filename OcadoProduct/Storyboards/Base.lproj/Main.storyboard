@@ -44,7 +44,7 @@
                                                         <constraint firstAttribute="height" constant="34" id="5Eq-cF-mbg"/>
                                                         <constraint firstAttribute="width" constant="95" id="Ngk-bB-O6h"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="28"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="25"/>
                                                     <color key="textColor" name="Ocado - Cerulean"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -107,6 +107,7 @@
                     <connections>
                         <outlet property="loadingIndicator" destination="4uE-Ec-VlD" id="4fK-S8-mg5"/>
                         <outlet property="productTableView" destination="XG3-bm-DRp" id="2j9-Km-qSh"/>
+                        <segue destination="Zld-cS-e4B" kind="show" identifier="productDetailSegue" id="ec2-20-3dv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -121,6 +122,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="1oc-7S-BjM">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -131,9 +133,154 @@
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="117.85714285714285"/>
         </scene>
+        <!--Product Detail View Controller-->
+        <scene sceneID="qmq-Ek-cco">
+            <objects>
+                <viewController storyboardIdentifier="ProductDetailViewController" id="Zld-cS-e4B" customClass="ProductDetailViewController" customModule="OcadoProduct" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Kja-dZ-UdS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="KyL-P4-H9f">
+                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                                <color key="color" name="Ocado - Cerulean"/>
+                            </activityIndicatorView>
+                            <scrollView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ehm-Qd-wZX">
+                                <rect key="frame" x="0.0" y="140" width="414" height="722"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Vs-JG-5bJ">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="861"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ocado Organic Fairtrade Bananas" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="ItM-LC-UMo">
+                                                <rect key="frame" x="20" y="8" width="374" height="46"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="46" id="2hW-5F-AQY"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                                <color key="textColor" name="Ocado - Mako"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zbP-QZ-Sub">
+                                                <rect key="frame" x="20" y="62" width="374" height="197"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="OcadoEmpty" translatesAutoresizingMaskIntoConstraints="NO" id="XTH-gy-Cbh">
+                                                        <rect key="frame" x="102" y="0.0" width="170" height="197"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="170" id="4Jl-pf-MR9"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="999.99" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="Z49-Bb-A6b">
+                                                        <rect key="frame" x="279" y="155" width="95" height="42"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="42" id="F7i-NP-bIh"/>
+                                                            <constraint firstAttribute="width" constant="95" id="M2Z-59-uxV"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                                        <color key="textColor" name="Ocado - Cerulean"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="Z49-Bb-A6b" secondAttribute="trailing" id="44c-mb-8ax"/>
+                                                    <constraint firstAttribute="height" constant="197" id="BTr-n3-E7N"/>
+                                                    <constraint firstItem="XTH-gy-Cbh" firstAttribute="centerY" secondItem="zbP-QZ-Sub" secondAttribute="centerY" id="Hri-5D-Z3Y"/>
+                                                    <constraint firstItem="Z49-Bb-A6b" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="zbP-QZ-Sub" secondAttribute="leading" constant="20" symbolic="YES" id="LtP-Qv-jTv"/>
+                                                    <constraint firstAttribute="bottom" secondItem="Z49-Bb-A6b" secondAttribute="bottom" id="TpV-d8-cbV"/>
+                                                    <constraint firstAttribute="bottom" secondItem="XTH-gy-Cbh" secondAttribute="bottom" id="mEf-Ra-84p"/>
+                                                    <constraint firstItem="XTH-gy-Cbh" firstAttribute="centerX" secondItem="zbP-QZ-Sub" secondAttribute="centerX" id="pwa-oV-yBv"/>
+                                                    <constraint firstItem="XTH-gy-Cbh" firstAttribute="top" secondItem="zbP-QZ-Sub" secondAttribute="top" id="t06-mf-m02"/>
+                                                </constraints>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OHy-G7-QIF">
+                                                <rect key="frame" x="20" y="279" width="374" height="243.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="64" id="9aB-Nx-qMt"/>
+                                                </constraints>
+                                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" name="Ocado - Mako"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HEh-oh-5qy">
+                                                <rect key="frame" x="20" y="597.5" width="374" height="243.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="kIQ-Rr-4y8"/>
+                                                </constraints>
+                                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" name="Ocado - Mako"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Allergen Information" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dhg-7c-E4h">
+                                                <rect key="frame" x="20" y="562.5" width="374" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="1XH-7x-uzy"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
+                                                <color key="textColor" name="Ocado - Mako"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="OHy-G7-QIF" firstAttribute="top" secondItem="zbP-QZ-Sub" secondAttribute="bottom" constant="20" id="00W-NN-Dv6"/>
+                                            <constraint firstItem="Dhg-7c-E4h" firstAttribute="top" secondItem="OHy-G7-QIF" secondAttribute="bottom" constant="40" id="0ba-cm-XJR"/>
+                                            <constraint firstAttribute="trailing" secondItem="HEh-oh-5qy" secondAttribute="trailing" constant="20" id="0j0-GX-ckN"/>
+                                            <constraint firstItem="OHy-G7-QIF" firstAttribute="leading" secondItem="6Vs-JG-5bJ" secondAttribute="leading" constant="20" id="58p-om-NBF"/>
+                                            <constraint firstItem="ItM-LC-UMo" firstAttribute="leading" secondItem="6Vs-JG-5bJ" secondAttribute="leading" constant="20" id="5N5-N5-sJS"/>
+                                            <constraint firstItem="Dhg-7c-E4h" firstAttribute="leading" secondItem="6Vs-JG-5bJ" secondAttribute="leading" constant="20" id="6aJ-4b-Enl"/>
+                                            <constraint firstAttribute="trailing" secondItem="ItM-LC-UMo" secondAttribute="trailing" constant="20" id="6dW-l6-vpF"/>
+                                            <constraint firstAttribute="trailing" secondItem="Dhg-7c-E4h" secondAttribute="trailing" constant="20" id="H1f-1W-Fcw"/>
+                                            <constraint firstItem="zbP-QZ-Sub" firstAttribute="leading" secondItem="6Vs-JG-5bJ" secondAttribute="leading" constant="20" id="Wh8-Ta-Koy"/>
+                                            <constraint firstAttribute="trailing" secondItem="OHy-G7-QIF" secondAttribute="trailing" constant="20" id="Y7e-dZ-aP6"/>
+                                            <constraint firstItem="HEh-oh-5qy" firstAttribute="top" secondItem="Dhg-7c-E4h" secondAttribute="bottom" constant="5" id="cMA-Y0-QOM"/>
+                                            <constraint firstItem="ItM-LC-UMo" firstAttribute="top" secondItem="6Vs-JG-5bJ" secondAttribute="top" constant="8" id="hIB-LQ-fA7"/>
+                                            <constraint firstAttribute="bottom" secondItem="HEh-oh-5qy" secondAttribute="bottom" constant="20" symbolic="YES" id="hZu-SP-k5g"/>
+                                            <constraint firstItem="HEh-oh-5qy" firstAttribute="leading" secondItem="6Vs-JG-5bJ" secondAttribute="leading" constant="20" id="isR-14-wbx"/>
+                                            <constraint firstItem="zbP-QZ-Sub" firstAttribute="top" secondItem="ItM-LC-UMo" secondAttribute="bottom" constant="8" id="lQV-yl-kPB"/>
+                                            <constraint firstAttribute="trailing" secondItem="zbP-QZ-Sub" secondAttribute="trailing" constant="20" id="sOk-t1-96d"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="6Vs-JG-5bJ" firstAttribute="leading" secondItem="ehm-Qd-wZX" secondAttribute="leading" id="EPr-4M-bDQ"/>
+                                    <constraint firstItem="6Vs-JG-5bJ" firstAttribute="top" secondItem="ehm-Qd-wZX" secondAttribute="top" id="SSa-sQ-Bk9"/>
+                                    <constraint firstItem="6Vs-JG-5bJ" firstAttribute="width" secondItem="ehm-Qd-wZX" secondAttribute="width" id="Vp2-Nw-r1e"/>
+                                    <constraint firstAttribute="bottom" secondItem="6Vs-JG-5bJ" secondAttribute="bottom" id="akm-yS-XFH"/>
+                                    <constraint firstItem="6Vs-JG-5bJ" firstAttribute="height" secondItem="ehm-Qd-wZX" secondAttribute="height" priority="250" id="hjJ-ot-XAq"/>
+                                    <constraint firstAttribute="trailing" secondItem="6Vs-JG-5bJ" secondAttribute="trailing" id="t6X-pG-hrh"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ehm-Qd-wZX" firstAttribute="trailing" secondItem="uVY-CH-aGk" secondAttribute="trailing" id="89P-BK-Inx"/>
+                            <constraint firstItem="KyL-P4-H9f" firstAttribute="centerY" secondItem="Kja-dZ-UdS" secondAttribute="centerY" id="C3I-as-LYf"/>
+                            <constraint firstItem="KyL-P4-H9f" firstAttribute="centerX" secondItem="Kja-dZ-UdS" secondAttribute="centerX" id="KUo-ld-YGX"/>
+                            <constraint firstItem="ehm-Qd-wZX" firstAttribute="leading" secondItem="uVY-CH-aGk" secondAttribute="leading" id="aMf-nd-2BH"/>
+                            <constraint firstItem="ehm-Qd-wZX" firstAttribute="bottom" secondItem="uVY-CH-aGk" secondAttribute="bottom" id="iLE-ls-ijn"/>
+                            <constraint firstItem="ehm-Qd-wZX" firstAttribute="top" secondItem="uVY-CH-aGk" secondAttribute="top" id="s17-5Y-SPN"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="uVY-CH-aGk"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ART-22-nB2"/>
+                    <connections>
+                        <outlet property="allergyLabel" destination="HEh-oh-5qy" id="gua-Sk-KCZ"/>
+                        <outlet property="descriptionLabel" destination="OHy-G7-QIF" id="f3o-Ar-QQU"/>
+                        <outlet property="loadingIndicator" destination="KyL-P4-H9f" id="zZI-G1-EYb"/>
+                        <outlet property="priceLabel" destination="Z49-Bb-A6b" id="Vyr-zi-bdJ"/>
+                        <outlet property="productImageView" destination="XTH-gy-Cbh" id="c7D-zi-gAV"/>
+                        <outlet property="productScrollView" destination="ehm-Qd-wZX" id="1Ck-jb-STB"/>
+                        <outlet property="titleLabel" destination="ItM-LC-UMo" id="DpR-rm-0IJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R55-Xf-7PN" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1860.8695652173915" y="117.85714285714285"/>
+        </scene>
     </scenes>
     <resources>
-        <image name="OcadoEmpty" width="200" height="200"/>
+        <image name="OcadoEmpty" width="100" height="100"/>
         <namedColor name="Ocado - Cerulean">
             <color red="0.0" green="0.60799998044967651" blue="0.85500001907348633" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
