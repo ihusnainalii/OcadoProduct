@@ -1,0 +1,10 @@
+language: swift
+osx_image: xcode11.2
+xcode_project: OcadoProduct.xcodeproj
+xcode_scheme: OcadoProductTests
+before_install:
+install:
+script:
+- xcodebuild -scheme OcadoProduct -sdk iphonesimulator -enableCodeCoverage YES -destination 'platform=iOS Simulator,name=iPhone X,OS=12.0' GCC_GENERATE_TEST_COVERAGE_FILES=YES build test
+after_success:
+- bash <(curl -s https://codecov.io/bash)

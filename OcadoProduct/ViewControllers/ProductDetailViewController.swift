@@ -23,6 +23,8 @@ class ProductDetailViewController: UIViewController {
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var allergyLabel: UILabel!
     @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
+    
+    //I added a scrollview so that if the productDetail contains a very large description or allergy information the user can see all the information. But based on the products we have in the test environment we will not be able to see the scroll.
     @IBOutlet weak var productScrollView: UIScrollView!
     
     //
