@@ -12,6 +12,8 @@ import Foundation
 
 class MockProductClient: NetworkClient {
     
+    var shouldReturnError = false
+    
     //
     // MARK: - Public Functions
     
@@ -27,6 +29,10 @@ class MockProductClient: NetworkClient {
         
         switch productRouter {
         case .products:
+            
+            if shouldReturnError {
+                return completion(.failure(.statusCodeError(message: "StatusCode 404", code: 404)))
+            }
             
             guard let url = bundle.url(forResource: "products", withExtension: "json") else {
                 return
@@ -44,8 +50,10 @@ class MockProductClient: NetworkClient {
             
         case .productDetail(let idProduct):
             
-            if idProduct != 309396011 {
+            if idProduct != 309396011 && idProduct != 666 {
                 return completion(.failure(.decodingError))
+            } else if idProduct == 666 {
+                return completion(.failure(.statusCodeError(message: "StatusCode 500", code: 500)))
             }
             
             guard let url = bundle.url(forResource: "productDetail", withExtension: "json") else {

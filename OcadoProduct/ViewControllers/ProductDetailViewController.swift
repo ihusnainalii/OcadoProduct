@@ -44,9 +44,10 @@ class ProductDetailViewController: UIViewController {
                 self.fillProductOnScreen()
             }) { error in
                 //We could put a message more user friendly.
+                self.hiddenItems(isHidden: true)
+                
                 switch error {
                 case .statusCodeError(let message, _):
-                    self.hiddenItems(isHidden: true)
                     let alertController = UIAlertController(title: "Alert", message: message, preferredStyle: .alert)
                     alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: { _ in
                         self.navigationController?.popViewController(animated: true)

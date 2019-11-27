@@ -44,9 +44,10 @@ class ProductListViewController: UIViewController {
             self.productTableView.reloadData()
         }) { error in
             //We could put a message more user friendly.
+            self.loadingIndicator.isHidden = true
+            
             switch error {
-            case .statusCodeError(let message, _):
-                self.loadingIndicator.isHidden = true
+            case .statusCodeError(let message, _):    
                 let alertController = UIAlertController(title: "Alert", message: message, preferredStyle: .alert)
                 alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
                 self.present(alertController, animated: true, completion: nil)
